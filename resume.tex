@@ -1,0 +1,170 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tocloft}
+\usepackage{etoolbox}
+\usepackage{textcomp}
+\usepackage{bm}
+\robustify\cftdotfill
+
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.5in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.5in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7.5in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-4pt}}
+\newcommand{\resheading}[1]{\vspace{1pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[7.25in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{7.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+
+\begin{document}
+
+\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Corbin Taylor} & \textbf{\today} \\
+Astronomy Ph.D. Candidate, Data Analyst, and Programmer &  \\
+\end{tabular*}
+
+\smallskip
+\smallskip
+
+\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+\textbf{Email}: cjtaylor2390@gmail.com & \textbf{LinkedIn}: https://www.linkedin.com/in/corbin-taylor/\\
+\textbf{GitHub}: https://github.com/cjtaylor1990 & \textbf{Webpage}: https://www.astro.umd.edu/$\sim$cjtaylor/\\
+\end{tabular*}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ressubheading{University of Maryland}{College Park, MD}{Ph.D. Candidate Astronomy}{2013-2020}
+\begin{itemize}
+	\resitem{Specialized in computational Black Hole Astrophysics and Cosmology.}
+\end{itemize}
+\smallskip
+\ressubheading{University of Toledo}{Toledo, OH}{B.S. Astrophysics \& B.S. Pure Mathematics}{2008-2013}
+\begin{itemize}
+	\resitem{Cumulative GPA: 3.81}
+	\resitem{Graduated Magna Cum Laude with Physics Departmental Honors}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Skills}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item \textbf{Programming \& Markup}: \textbf{Python (SciPy, NumPy, Matplotlib)}, \textbf{C++}, C, HTML, CSS, Javascript, and IDL.
+	
+\item \textbf{Version Control \& Automation}: \textbf{Git (GitHub, GitLab)}, Bash scripting, and Slurm.
+
+\item \textbf{Operating Systems}: \textbf{OS X}, Unix/Linux, and Microsoft Windows.
+
+\item \textbf{Leadership \& Communication}: Proficient in \textbf{project planning, task delegation, and collaborative problem solving}. Experience with public speaking and mentoring.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Work Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ressubheading{University of Maryland - Department of Astronomy}{Jun 2014 - Present}{Graduate Research Assistant}{}
+\begin{itemize}
+	\resitem{Researched the properties of supermassive black holes and the Milky Way using computer simulations.}
+	\resitem{Independently wrote scientific simulation and analysis software using \textbf{Python} and \textbf{C++}.}
+	\resitem{Utilized \textbf{SciPy} and \textbf{NumPy} libraries to manipulate and analyze large data sets (up to $\bm{\sim}$\textbf{1 Tb}).}
+	\resitem{Created automation scripts using Slurm and Bash to utilize the Deepthought 2 (U of Maryland) and Odyssey (Harvard) clusters, running jobs across \textbf{$\bm{10^{3}}$ processors}.}
+	\resitem{Used algorithmic thinking and creative problem solving to maximize program efficiency, \textbf{decreasing both run-time and memory usage by up to a factor of  $\bm{10^{3}}$ for $\bm{\sim10^{10}}$ entries}.}
+	\resitem{Collaborated with \textbf{20+ scientists in the US and Europe} in research, paper publication, and scientific software development.}
+	\resitem{Presented my work at \textbf{12 professional conferences and universities in the US and Europe}.}
+	\resitem{Independently prepared and published three scientific papers in major professional journals (Taylor \& Reynolds 2018a,b; Taylor et al. 2016)}
+\end{itemize}
+\newpage
+\ressubheading{Space Telescope Science Institute}{Jun 2012 - Aug 2012}{Summer Research Intern}{}
+\begin{itemize}
+	\resitem{\textbf{Developed a data reduction and analysis pipeline} for space telescope spectral data using \textbf{IDL}.}
+	\resitem{Used well-understood \textbf{test cases to ensure pipeline fidelity}.}
+	\resitem{Measured the properties of gas around galaxies using the Cosmic Origin Spectrograph on the Hubble Space Telescope.}
+\end{itemize}
+\ressubheading{University of Toledo - Department of Physics and Astronomy}{Jan 2009 - Aug 2013}{Undergraduate Research Assistant}{}
+\begin{itemize}
+	\resitem{\textbf{Cleaned and analyzed observational data} taken by the 10m Hobby-Eberly Telescope.}
+	\resitem{Found evidence for lithium production in supernovae by modeling absorption spectra.}
+	\resitem{Prepared and published a scientific paper in a major professional journal (Taylor et al. 2012)}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Leadership Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ressubheading{GRAD-MAP Diversity Program}{May 2014 - Aug 2017}{Team Member}{}
+\begin{itemize}
+	\resitem{\textbf{Led the preparation and teaching of a multi-day Python workshop.}}
+	\resitem{Helped prepare and manage week-long research workshops that helped minority students develop skills necessary for a STEM career.}
+	\resitem{Collaborated with minority-serving universities and colleges in Maryland, Virginia, and D.C.}
+\end{itemize}
+\smallskip
+\ressubheading{University of Maryland - Department of Astronomy}{Jan 2017 - Apr 2017}{Prospective Student Visit Coordinator}{}
+\begin{itemize}
+	\resitem{Led the preparation and execution of departmental visits for 19 potential Astronomy graduate students.}
+	\resitem{Recruited, led, and delegated tasks to a planning committee of 10 graduate student volunteers.}
+	\resitem{Successfully increased new graduate student recruitment rate by \textbf{over 30\% compared to previous years}.}
+\end{itemize}
+\smallskip
+\ressubheading{University of Maryland - Department of Astronomy}{Aug 2013 - May 2014}{Graduate Teaching Assistant}{}
+\begin{itemize}
+	\resitem{Led 50 minute discussions with hands-on demonstrations for two sections once a week with an average of 20-30 students per section.}
+	\resitem{Mentored struggling students during and outside of my weekly office hours.}
+	\resitem{Graded homework, in-class assignments, and exams in a fair and timely manner.}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Select Publications}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+	\resitem{Taylor, C. and Reynolds, C.S. 2018b; {\it X-Ray Reverberation From Black Hole Accretion Disks With Realistic Geometric Thickness}, ApJ, 868, 109}
+	\resitem{Taylor, C. and Reynolds, C.S. 2018a; {\it Exploring The Effects of Disk Thickness On The Black Hole Reflection Spectrum}, ApJl, 855, 120}
+	\resitem{Taylor, C.; Boylan-Kolchin, M.; Torrey, Paul; Vogelsberger, Mark; and Hernquist, Lars 2016; {\it The Mass Profile Of The Milky Way To The Virial Radius From The Illustris Simulation}, MNRAS 461, 3483}
+	\resitem{Taylor, C.J.; Richey, A.M.: Federman, S.R.; and Lambert, D.L. 2012; {\it The $^{7}$Li/$^{6}$Li Isotope Ratio Near The Supernova Remnant IC 443}, ApJ 750 L15.}
+\end{itemize}
+
+\end{document}
